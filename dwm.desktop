@@ -1,0 +1,7 @@
+# /usr/share/xsessions/dwm.desktop
+[Desktop Entry]
+Name=Dwm
+Comment=This session logs you into DWM (Dynamic Windows Manager)
+Icon=
+Exec=dwmstart
+Type=Application

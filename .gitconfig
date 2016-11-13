@@ -1,0 +1,18 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lg = log --graph --oneline --decorate
+	ll = log --graph --oneline --decorate --date=short --all --pretty=format:'%ad %h %Cgreen%an %Cred%d %Creset%s'
+[user]
+	email = yan.pye.aung@gmail.com
+	name = Yan P Aung
+[push]
+	default = tracking
+[github]
+	user = ypa
+[core]
+	editor = vim
