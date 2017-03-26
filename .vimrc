@@ -21,6 +21,12 @@ Plugin 'kien/ctrlp.vim' " Super Searching with CtrlP
 Plugin 'airblade/vim-gitgutter' " Git edits in the gutter
 let g:gitgutter_sign_column_always = 1 " show git gutter always
 
+Plugin 'junegunn/goyo.vim' "Distraction free editing
+
+Plugin 'godlygeek/tabular' " Dependency for vim-markdown (below), must come before it.
+Plugin 'plasticboy/vim-markdown' "Markdown syntax hightlighting matching rules and mappings
+let g:vim_markdown_folding_disabled=1 " disable folding
+
 Plugin 'mattn/webapi-vim' "dependency for gist-vim
 Plugin 'mattn/gist-vim' " uploading as Gists to github
 let g:gist_detect_filetype = 1 " Detect file type from file name.
@@ -88,6 +94,20 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" Python indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 " number of visual spaces per TAB
+    \ set softtabstop=4 " number of spaces in tab when edidting
+    \ set shiftwidth=4
+    \ set expandtab " tabs are spaces
+    \ set autoindent
+    \ set fileformat=unix
+
+" JS, HTML and CSS indentation
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
 
 " mark extra whitespace as bad, color it .
 highlight BadWhitespace ctermbg=red 
@@ -170,13 +190,16 @@ augroup vimrcEx
     \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,html,javascript set ai sw=2 sts=2 et
+  autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
+
+  autocmd! BufRead,BufNewFile *.sass setfiletype sass
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
-  autocmd FileType gitcommit set tw=68 spell
+  " Indent p tags
+  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
@@ -187,7 +210,8 @@ augroup vimrcEx
   autocmd! CmdwinLeave * :call MapCR()
 
   " *.md is markdown
-  autocmd! BufNewFile,BufRead *.md setlocal ft=mkd
+  autocmd! BufNewFile,BufRead *.md setlocal ft=
 
-
+  " indent slim two spaces, not four
+  autocmd! FileType *.slim set sw=2 sts=2 et
 augroup END
