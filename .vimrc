@@ -32,6 +32,23 @@ Plugin 'nvie/vim-flake8' "python checking / code-linting - this only check style
 Plugin 'scrooloose/syntastic' "python syntax checking
 
 
+Plugin 'Shougo/neocomplete.vim' "autocomplete
+let g:neocomplete#enable_at_startup = 1 " Enable on startup
+let g:neocomplete#enable_smart_case = 1 " Use smartcase.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
