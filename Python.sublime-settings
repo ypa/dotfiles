@@ -1,0 +1,14 @@
+// These settings override both User and Default settings for the Python Django syntax
+/*
+To update this setting have a Python file opened then
+go to Sublime Text > Preferences > Settings - Syntax Specific
+*/
+{
+	// tabs and whitespace
+	"auto_indent": true,
+	"rulers": [79],
+	"smart_indent": true,
+	"tab_size": 4,
+	"trim_automatic_white_space": true,
+	"use_tab_stops": true
+}
