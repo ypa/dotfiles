@@ -44,6 +44,7 @@
   },
   "files.autoSave": "afterDelay",
   "explorer.confirmDragAndDrop": false,
-  "editor.fontFamily": "'Iosevka', 'Source Code Pro', 'Inconsolata-g'",
+  "editor.fontFamily": "'Iosevka Type', 'Source Code Pro', 'Inconsolata-g'",
+  "editor.fontSize": 15,
   "terminal.integrated.fontFamily": "'Source Code Pro','DejaVu Sans Mono','Inconsolata-g'"
 }
