@@ -4,20 +4,20 @@ To update this setting have a Python file opened then
 go to Sublime Text > Preferences > Settings - Syntax Specific
 */
 {
-	// tabs and whitespace
-	"auto_indent": true,
-  	"auto_complete": true,
-  	"copy_with_empty_selection": true,
-  	"index_files": true,
-	"rulers":
- 	[
-		79
-	],
-	"smart_indent": true,
-	"tab_size": 4,
-  	"translate_tabs_to_spaces": true,
-  	"trim_trailing_white_space_on_save": true,
-	"trim_automatic_white_space": true,
-  	"ensure_newline_at_eof_on_save": true,
-	"use_tab_stops": true
+  // tabs and whitespace
+  "auto_indent": true,
+  "auto_complete": true,
+  "copy_with_empty_selection": true,
+  "index_files": true,
+  "rulers":
+  [
+    79
+  ],
+  "smart_indent": true,
+  "tab_size": 4,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "trim_automatic_white_space": true,
+  "ensure_newline_at_eof_on_save": true,
+  "use_tab_stops": true
 }
