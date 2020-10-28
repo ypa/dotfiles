@@ -6,7 +6,7 @@
   "vim.hlsearch": true,
   "editor.detectIndentation": true,
   "editor.formatOnPaste": true,
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "files.insertFinalNewline": true,
   "vim.insertModeKeyBindings": [
@@ -68,5 +68,8 @@
   "explorer.confirmDragAndDrop": false,
   "editor.fontFamily": "'Iosevka Type', 'Source Code Pro', 'Inconsolata-g'",
   "editor.fontSize": 15,
-  "terminal.integrated.fontFamily": "'Source Code Pro','DejaVu Sans Mono','Inconsolata-g'"
+  "terminal.integrated.fontFamily": "'Source Code Pro','DejaVu Sans Mono','Inconsolata-g'",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true
 }
