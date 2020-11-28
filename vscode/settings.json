@@ -50,11 +50,16 @@
     "editor.tabSize": 2
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
   },
   "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2,
+    "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
