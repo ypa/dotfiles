@@ -32,7 +32,9 @@
   },
   "FSharp.useSdkScripts": true,
   "window.zoomLevel": 0,
+  "python.formatting.provider": "black",
   "[python]": {
+    "editor.formatOnSave": true,
     "editor.rulers": [
       72,
       79
@@ -63,11 +65,23 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "editor.renderWhitespace": "all",
     "editor.acceptSuggestionOnEnter": "off"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
   "files.autoSave": "afterDelay",
   "explorer.confirmDragAndDrop": false,
